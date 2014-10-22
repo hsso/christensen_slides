@@ -1,7 +1,8 @@
 \documentclass{beamer}
 
 \usepackage[version=3]{mhchem}
-\usepackage{siunitx,booktabs,multirow,graphicx}
+\usepackage{siunitx,booktabs,multirow,graphicx,natbib}
+\usepackage{aas_macros,hyperref}
 
 \graphicspath{{/home/miguel/HssO/Christensen/paper/}}
 
@@ -58,6 +59,16 @@
   \item Photometric observations of the dust coma in the
   \SIlist{70;160}{\um} channels were acquired with PACS
   \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{\herschel{} \christensen{} observations}
+  \begin{itemize}
+  \item long-period comet that was discovered in November 2006 at a distance of
+8.6 AU from the Sun.
+  \item It passed perihelion on 6 July 2009 at a heliocentric distance of 3.13
+AU.
+  \end{itemize}
   \Fontvi
   \begin{table}
     \centering
@@ -93,6 +104,7 @@
 \frametitle{HIFI observations}
 \includegraphics[width=.5\textwidth]{figures/christensen-figure0.pdf}
 \includegraphics[width=.5\textwidth]{figures/christensen-figure1.pdf}
+
 A tentative detection of the ortho-\ce{H2O} ground-state transition is
 observed in the HIFI spectra with 4-$\sigma$ significance
 \end{frame}
@@ -129,6 +141,25 @@ observed in the HIFI spectra with 4-$\sigma$ significance
 \begin{frame}
 \frametitle{Production rates}
 \includegraphics[width=.8\textwidth]{figures/christensen-figure5.pdf}
+
+Water production rate measured by HIFI and the production rate at
+the subsolar point on the nucleus shown by the solid curve agree
+\end{frame}
+
+\begin{frame}
+\frametitle{Production rates}
+\begin{itemize}
+\item The \ce{H2O} line is only marginally detected
+\item derived \ce{H2O} production rate and line shape and velocity shift are
+consistent with the emission feature having a cometary origin
+\item We derive a water production rate of \SI{\qho}{\mols} using a spherically
+symmetric radiative transfer model
+\item we aimed to detect the ground-state rotational transitions of
+ortho-\ce{NH3} in the USB of HIFI's band 1b
+\item a 3-$\sigma$ upper limit for the ammonia production rate of
+\SI{\qnh}{\mols} is derived, corresponding to a mixing ratio
+$Q_\ce{NH3}/Q_\ce{H2O} < 0.75$
+\end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -137,8 +168,27 @@ observed in the HIFI spectra with 4-$\sigma$ significance
 \end{frame}
 
 \begin{frame}
+\frametitle{Dust production rates}
+\begin{itemize}
+\item To determine the dust production rate $Q_\mathrm{dust}$, we
+compared the flux densities measured on the brightest pixels of the blue
+and red PACS maps with those expected from a model of dust thermal
+emission
+\item The model used for this study is the same as that applied to the PACS
+data obtained in 2009 at 3.35 AU from the Sun
+\citep{2010A&A...518L.149B}
+\item Absorption cross-sections calculated with the
+Mie theory were used to compute the temperature of the grains solving the
+equation of radiative equilibrium
+\end{itemize}
+\end{frame}
+
+\begin{frame}
 \frametitle{Radial profiles}
 \includegraphics[width=.8\textwidth]{figures/christensen-figure7.jpg}
+
+We fit the radial dependence of the surface brightness with radially
+symmetric profiles for the blue and red bands.
 \end{frame}
 
 \begin{frame}
@@ -157,6 +207,12 @@ observed in the HIFI spectra with 4-$\sigma$ significance
   ratio remained approximately constant during the period when the
   activity became increasingly dominated by CO outgassing.
 \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{References}
+\bibliographystyle{aa}
+\bibliography{ads}
 \end{frame}
 
 \end{document}
