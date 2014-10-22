@@ -15,6 +15,8 @@
 \newcommand{\herschel}{{\it Herschel}}
 \newcommand{\christensen}{C/2006~W3 (Christensen)}
 \newcommand{\rh}{r_\mathrm{h}}
+\newcommand{\trans}{$J_{K_\mathrm{a} K_\mathrm{c}}\ (1_{10}\text{--}1_{01})$}
+\newcommand{\nh}{$J_K\ (1_{0}\text{--}0_{0})$}
 
 \newcommand\Fontvi{\fontsize{6}{7.2}\selectfont}
 
@@ -48,41 +50,51 @@
 
 \begin{frame}
 \frametitle{\christensen{} observations}
-\Fontvi
-\begin{table}
-  \centering
-  \begin{tabular}{c S[table-format = 3] c
-		  S[table-format = 10,
-		  table-space-text-post = \textsuperscript{\emph{h}}]
-		  S[table-format = 2.1]
-		  S[table-format = 3]
-		  c c c c S
-		  }
-    \toprule
-    Date &
-    {OD} &
-    Inst. & {ObsID} & {Exp.} &
-    {Angle} &
-    {Scan size} &
-    {Speed} &
-    $\rh$ &
-    $\Delta$ &
-    {$\phi$}\\
-    (yyyy-mm-dd.ddd) & & & & {(\si{\minute})} &
-    {(\si{\degree})} & {($\si{\arcmin} \times \si{\arcmin}$)} &
-    {("/s)} &
-    (AU) & (AU) & {(\si{\degree})}\\
-    \midrule
-    \input{log_slide.txt}
-    \bottomrule
-  \end{tabular}
-\end{table}
+  \begin{itemize}
+  \item Searched for emission in the \ce{H2O} and \ce{NH3}
+  ground-state rotational transitions, \trans{} at
+  \SI{557}{\giga\hertz} and \nh{} at \SI{572}{\giga\hertz}
+  simultaneously with HIFI
+  \item Photometric observations of the dust coma in the
+  \SIlist{70;160}{\um} channels were acquired with PACS
+  \end{itemize}
+  \Fontvi
+  \begin{table}
+    \centering
+    \begin{tabular}{c S[table-format = 3] c
+		    S[table-format = 10,
+		    table-space-text-post = \textsuperscript{\emph{h}}]
+		    S[table-format = 2.1]
+		    S[table-format = 3]
+		    c c c c S
+		    }
+      \toprule
+      Date &
+      {OD} &
+      Inst. & {ObsID} & {Exp.} &
+      {Angle} &
+      {Scan size} &
+      {Speed} &
+      $\rh$ &
+      $\Delta$ &
+      {$\phi$}\\
+      (yyyy-mm-dd.ddd) & & & & {(\si{\minute})} &
+      {(\si{\degree})} & {($\si{\arcmin} \times \si{\arcmin}$)} &
+      {("/s)} &
+      (AU) & (AU) & {(\si{\degree})}\\
+      \midrule
+      \input{log_slide.txt}
+      \bottomrule
+    \end{tabular}
+  \end{table}
 \end{frame}
 
 \begin{frame}
 \frametitle{HIFI observations}
 \includegraphics[width=.5\textwidth]{figures/christensen-figure0.pdf}
 \includegraphics[width=.5\textwidth]{figures/christensen-figure1.pdf}
+A tentative detection of the ortho-\ce{H2O} ground-state transition is
+observed in the HIFI spectra with 4-$\sigma$ significance
 \end{frame}
 
 \begin{frame}
