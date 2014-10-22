@@ -1,0 +1,130 @@
+\documentclass{beamer}
+
+\usepackage[version=3]{mhchem}
+\usepackage{siunitx,booktabs,multirow,graphicx}
+
+\DeclareSIUnit\Kms{\milli\kelvin\km\per\s}
+\DeclareSIUnit\kms{\km\per\s}
+\DeclareSIUnit\kgs{\kg\per\s}
+\DeclareSIUnit\mols{{molec.}\,s^{-1}}
+\sisetup{
+  separate-uncertainty,
+}
+\newcommand{\herschel}{{\it Herschel}}
+\newcommand{\christensen}{C/2006~W3 (Christensen)}
+\newcommand{\rh}{r_\mathrm{h}}
+
+\newcommand\Fontvi{\fontsize{6}{7.2}\selectfont}
+
+\newcommand{\wbsho}{11.4(35)}
+\newcommand{\hrsho}{16.2(46)}
+\newcommand{\wbsv}{-71(40)}
+\newcommand{\wbshv}{-240(90)}
+\newcommand{\wbsvv}{-10(70)}
+\newcommand{\wbsdv}{-230(120)}
+\newcommand{\hrsv}{-77(67)}
+\newcommand{\hrshv}{-230(120)}
+\newcommand{\hrsvv}{-150(66)}
+\newcommand{\hrsdv}{-80(140)}
+\newcommand{\wbsqho}{1.7(5)e27}
+\newcommand{\hrsqho}{2.3(7)e27}
+\newcommand{\qho}{2.0(5)e27}
+
+\newcommand{\wbsn}{<13}
+\newcommand{\hrsn}{<17}
+\newcommand{\wbsqn}{<1.5e27}
+\newcommand{\hrsqn}{<1.9e27}
+\newcommand{\qnh}{<1.5e27}
+
+\begin{document}
+
+\title{\herschel{} observations of gas and dust in comet
+\christensen{} at  5 AU from the Sun}
+
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{\christensen{} observations}
+\Fontvi
+\begin{table}
+  \centering
+  \begin{tabular}{c S[table-format = 3] c
+		  S[table-format = 10,
+		  table-space-text-post = \textsuperscript{\emph{h}}]
+		  S[table-format = 2.1]
+		  S[table-format = 3]
+		  c c c c S
+		  }
+    \toprule
+    Date &
+    {OD} &
+    Inst. & {ObsID} & {Exp.} &
+    {Angle} &
+    {Scan size} &
+    {Speed} &
+    $\rh$ &
+    $\Delta$ &
+    {$\phi$}\\
+    (yyyy-mm-dd.ddd) & & & & {(\si{\minute})} &
+    {(\si{\degree})} & {($\si{\arcmin} \times \si{\arcmin}$)} &
+    {("/s)} &
+    (AU) & (AU) & {(\si{\degree})}\\
+    \midrule
+    \input{log_slide.txt}
+    \bottomrule
+  \end{tabular}
+\end{table}
+%More content goes here
+\end{frame}
+
+\begin{frame}
+\frametitle{HIFI observations}
+\includegraphics[width=.5\textwidth]{figures/christensen-figure0.pdf}
+\includegraphics[width=.5\textwidth]{figures/christensen-figure1.pdf}
+\end{frame}
+
+\begin{frame}
+\frametitle{Production rates}
+\begin{table}
+  \label{tbl:q}
+  \centering
+  \begin{tabular}{ccc
+		  S[table-format = <2.1(2)]
+		  S[table-format = +2(2)]
+		  S[table-format = <1.1(1)e2]
+		  }
+    \toprule
+    Molecule & Spec. &
+    $\sigma_{T_\mathrm{mB}}$ &
+    ${\int T_\mathrm{mB}\, dv}$ &
+    {$\Delta v$} &
+    {$Q$}\\
+    & & (\si{\milli\K}) & {(\si{\Kms})} & {(\si{\m\per\s})} &
+    {(\si{\mols})} \\
+    \midrule
+    \multirow{2}{*}{\ce{H2O}} & WBS & 1.5 & \wbsho & \wbsv & \wbsqho \\
+                              & HRS & 6.3 & \hrsho & \hrsv & \hrsqho \\
+    \midrule
+    \multirow{2}{*}{\ce{NH3}} & WBS & 1.5 & \wbsn & & \wbsqn \\
+                              & HRS & 6.3 & \hrsn & & \hrsqn \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}
+\frametitle{Production rates}
+\includegraphics[width=.8\textwidth]{figures/christensen-figure5.pdf}
+\end{frame}
+
+\begin{frame}
+\frametitle{Dust emission}
+\includegraphics[width=.8\textwidth]{figures/christensen-figure6.pdf}
+\end{frame}
+
+\begin{frame}
+\frametitle{Radial profiles}
+\includegraphics[width=.8\textwidth]{figures/christensen-figure7.jpg}
+\end{frame}
+
+\end{document}
